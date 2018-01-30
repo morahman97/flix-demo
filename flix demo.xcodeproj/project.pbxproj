@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CD35B64F201F0B2000907637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B64E201F0B2000907637 /* AppDelegate.swift */; };
-		CD35B651201F0B2000907637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B650201F0B2000907637 /* ViewController.swift */; };
 		CD35B654201F0B2000907637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD35B652201F0B2000907637 /* Main.storyboard */; };
 		CD35B656201F0B2000907637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD35B655201F0B2000907637 /* Assets.xcassets */; };
 		CD35B659201F0B2000907637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD35B657201F0B2000907637 /* LaunchScreen.storyboard */; };
 		CD35B664201F0B2000907637 /* flix_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B663201F0B2000907637 /* flix_demoTests.swift */; };
 		CD35B66F201F0B2000907637 /* flix_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B66E201F0B2000907637 /* flix_demoUITests.swift */; };
+		CD35B67F20200F4F00907637 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B67E20200F4F00907637 /* NowPlayingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		CD35B64B201F0B2000907637 /* flix demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flix demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD35B64E201F0B2000907637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD35B650201F0B2000907637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD35B653201F0B2000907637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD35B655201F0B2000907637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD35B658201F0B2000907637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		CD35B66A201F0B2000907637 /* flix demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "flix demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD35B66E201F0B2000907637 /* flix_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flix_demoUITests.swift; sourceTree = "<group>"; };
 		CD35B670201F0B2000907637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD35B67E20200F4F00907637 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CD35B64E201F0B2000907637 /* AppDelegate.swift */,
-				CD35B650201F0B2000907637 /* ViewController.swift */,
+				CD35B67E20200F4F00907637 /* NowPlayingViewController.swift */,
 				CD35B652201F0B2000907637 /* Main.storyboard */,
 				CD35B655201F0B2000907637 /* Assets.xcassets */,
 				CD35B657201F0B2000907637 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD35B651201F0B2000907637 /* ViewController.swift in Sources */,
+				CD35B67F20200F4F00907637 /* NowPlayingViewController.swift in Sources */,
 				CD35B64F201F0B2000907637 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
