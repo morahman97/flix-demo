@@ -30,24 +30,26 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. Noticed an issue that just sizing the cell from storyboard had no affect until assigned programmatically.
-2. Simulating poor internet connectivity for testing purposes.
+1. One possible extension could be searching by director name.
+2. Another possible extension may be an implementation of tags like "Horror", "Romance" etc.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/m8cam' title='Video Walkthrough' width='' alt='Flix Demo' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [GIPHY CAPTURE].
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
+As mentioned above, sizing of cells and simulating poor internet connectivity were the main issues encountered.
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Mohammed Rahman]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
