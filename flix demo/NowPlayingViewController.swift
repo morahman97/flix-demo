@@ -30,14 +30,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
         tableView.insertSubview(refreshControl, at: 0)
         tableView.rowHeight = 175
         fetchMovies()
-        activityIndicator.stopAnimating()
-        
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl){ // underscore is used to omit name in call
-        activityIndicator.startAnimating()
         fetchMovies()
-        activityIndicator.stopAnimating()
     }
     
     func fetchMovies(){
@@ -76,7 +72,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
         let posterURL = URL(string: baseURLString + posterPathString)! // String for poster's URL which concatenates the base with the unique poster's URLs
         cell.posterImageView.af_setImage(withURL: posterURL) // Set the image to the new URL
         
-        
+        activityIndicator.stopAnimating()
         return cell
     }
     

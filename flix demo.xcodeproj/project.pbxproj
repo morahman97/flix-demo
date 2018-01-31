@@ -16,7 +16,6 @@
 		CD35B66F201F0B2000907637 /* flix_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B66E201F0B2000907637 /* flix_demoUITests.swift */; };
 		CD35B67F20200F4F00907637 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B67E20200F4F00907637 /* NowPlayingViewController.swift */; };
 		CD35B68120214E0900907637 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35B68020214E0900907637 /* MovieCell.swift */; };
-		CD53A38420218677009F7CC3 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53A38320218676009F7CC3 /* SwiftNotice.swift */; };
 		DA803E6EE75CFA1BBF872B55 /* Pods_flix_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F404F9CAFDC86049003B7F81 /* Pods_flix_demoUITests.framework */; };
 		DB4AA95EE06AFCC65281D645 /* Pods_flix_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EA146B18C6616F2C692C44 /* Pods_flix_demo.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +60,6 @@
 		CD35B670201F0B2000907637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD35B67E20200F4F00907637 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		CD35B68020214E0900907637 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
-		CD53A38320218676009F7CC3 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = SOURCE_ROOT; };
 		F404F9CAFDC86049003B7F81 /* Pods_flix_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flix_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,7 +146,6 @@
 				CD35B657201F0B2000907637 /* LaunchScreen.storyboard */,
 				CD35B65A201F0B2000907637 /* Info.plist */,
 				CD35B68020214E0900907637 /* MovieCell.swift */,
-				CD53A38320218676009F7CC3 /* SwiftNotice.swift */,
 			);
 			path = "flix demo";
 			sourceTree = "<group>";
@@ -469,7 +466,6 @@
 				CD35B67F20200F4F00907637 /* NowPlayingViewController.swift in Sources */,
 				CD35B64F201F0B2000907637 /* AppDelegate.swift in Sources */,
 				CD35B68120214E0900907637 /* MovieCell.swift in Sources */,
-				CD53A38420218677009F7CC3 /* SwiftNotice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
