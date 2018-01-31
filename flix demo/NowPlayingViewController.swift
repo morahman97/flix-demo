@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource{
 
@@ -15,16 +16,29 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var movies :  [[String: Any]] = [] // Initialize movies array so we can access it throughout the file
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+
         tableView.dataSource = self
-        
-        //TODO why does the line below work to change the rowHeight but not the storyboard 
+  
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         tableView.rowHeight = 175
         
-        super.viewDidLoad()
+        fetchMovies()
+        
+    }
+    
+    @objc func didPullToRefresh(_ refreshControl: UIRefreshControl){ // underscore is used to omit name in call
+        fetchMovies()
+        
+    }
+    
+    func fetchMovies(){
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -35,33 +49,32 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
-                for movie in movies{
-                    let title = movie["title"] as! String
-                    print(title)
-                }
+                self.movies = movies
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
         task.resume()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        let movie = movies[indexPath.row] // Get movie
+        let title = movie["title"] as! String // Access title of movie
+        let overview = movie["overview"] as! String // Access overview of movie
+        cell.titleLabel.text = title
+        cell.overviewLabel.text = overview
         
-    }
-/*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
-        return cell
-    }
-    
-    */
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
+        let posterPathString = movie["poster_path"] as! String // String for poster URL
+        let baseURLString = "https://image.tmdb.org/t/p/w500" // String for base URL
+        let posterURL = URL(string: baseURLString + posterPathString)! // String for poster's URL which concatenates the base with the unique poster's URLs
+        cell.posterImageView.af_setImage(withURL: posterURL) // Set the image to the new URL
+        
+        
         return cell
     }
     
