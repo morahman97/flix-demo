@@ -35,10 +35,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a link to a walkthrough of implemented user stories:
 
-<img src='[Imgur](https://i.imgur.com/ysTu8PV.gifv)' title='Video Walkthrough' width='' alt='Flix Demo' />
-
+https://imgur.com/ysTu8PV.gif
 GIF created with [GIPHY CAPTURE].
 
 ## Notes
