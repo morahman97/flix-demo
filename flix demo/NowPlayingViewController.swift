@@ -15,27 +15,29 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var movies :  [[String: Any]] = [] // Initialize movies array so we can access it throughout the file
     var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        activityIndicator.startAnimating()
         tableView.dataSource = self
-  
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
         tableView.rowHeight = 175
-        
         fetchMovies()
+        activityIndicator.stopAnimating()
         
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl){ // underscore is used to omit name in call
+        activityIndicator.startAnimating()
         fetchMovies()
-        
+        activityIndicator.stopAnimating()
     }
     
     func fetchMovies(){
