@@ -12,18 +12,25 @@ import AlamofireImage
 class NowPlayingViewController: UIViewController, UITableViewDataSource{
 
     
-    
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var movies :  [[String: Any]] = [] // Initialize movies array so we can access it throughout the file
     var refreshControl: UIRefreshControl!
+    let alertController = UIAlertController(title: "Cannot Get Movies", message: "The Internet connection appears to be offline.", preferredStyle: .alert)
+    // create an OK action
+    let OKAction = UIAlertAction(title: "Try Again", style: .default) { (action) in
+        // handle response here.
+    }
+    // add the OK action to the alert controller
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         activityIndicator.startAnimating()
+        
+        alertController.addAction(OKAction)
+        
         tableView.dataSource = self
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
@@ -44,6 +51,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
             // This will run when the network request returns
             if let error = error {
                 print(error.localizedDescription)
+                self.present(self.alertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
