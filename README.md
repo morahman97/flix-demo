@@ -97,9 +97,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a link to a walkthrough of implemented user stories:
 
-https://imgur.com/Scj3OgK.gif
+https://imgur.com/XKPYLEI.gif
 
-<img src='https://imgur.com/Scj3OgK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/XKPYLEI.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [GIPHY CAPTURE].
 
