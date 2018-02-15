@@ -33,14 +33,12 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlL-xL-zlA">
                                                     <rect key="frame" x="113" y="8" width="254" height="20.5"/>
-                                                    <color key="backgroundColor" red="0.3054060401210491" green="0.83344672757709293" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text here to make sure that our text wraps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udT-ti-V9B">
                                                     <rect key="frame" x="113" y="36.5" width="254" height="20.5"/>
-                                                    <color key="backgroundColor" red="0.67505469965501841" green="0.5308880344723812" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -50,12 +48,13 @@
                                                     <color key="backgroundColor" red="0.41072190483692161" green="1" blue="0.4979206827921856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="97" id="JCR-0K-o2o"/>
+                                                        <constraint firstAttribute="height" constant="158.5" id="JWi-qq-NPE"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="udT-ti-V9B" firstAttribute="top" secondItem="tlL-xL-zlA" secondAttribute="bottom" constant="8" id="0BF-Ov-i3Z"/>
-                                                <constraint firstAttribute="bottom" secondItem="C0X-fb-uri" secondAttribute="bottom" constant="8" id="8R9-fp-8Oz"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="C0X-fb-uri" secondAttribute="bottom" constant="8" id="8R9-fp-8Oz"/>
                                                 <constraint firstItem="tlL-xL-zlA" firstAttribute="leading" secondItem="udT-ti-V9B" secondAttribute="leading" id="CP9-Lv-TXW"/>
                                                 <constraint firstItem="tlL-xL-zlA" firstAttribute="leading" secondItem="C0X-fb-uri" secondAttribute="trailing" constant="8" id="IH9-GO-G0y"/>
                                                 <constraint firstAttribute="trailing" secondItem="udT-ti-V9B" secondAttribute="trailing" constant="8" id="Lge-5f-MnS"/>
@@ -236,12 +235,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="192"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-Ar-yJn">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-Ar-yJn">
                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="192"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vg3-Ar-yJn" secondAttribute="bottom" id="9Hu-pU-xjI"/>
+                                            <constraint firstAttribute="trailing" secondItem="vg3-Ar-yJn" secondAttribute="trailing" id="Vcw-rJ-55e"/>
+                                            <constraint firstItem="vg3-Ar-yJn" firstAttribute="top" secondItem="PKp-NO-jbW" secondAttribute="top" id="a18-fr-MEL"/>
+                                            <constraint firstItem="vg3-Ar-yJn" firstAttribute="leading" secondItem="PKp-NO-jbW" secondAttribute="leading" id="bQN-qe-MYq"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="posterImageView" destination="vg3-Ar-yJn" id="Ynd-zU-Lik"/>
                                         </connections>

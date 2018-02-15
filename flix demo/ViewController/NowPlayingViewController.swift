@@ -26,7 +26,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight=UITableViewAutomaticDimension
+        tableView.estimatedRowHeight=50
         activityIndicator.startAnimating()
         
         alertController.addAction(OKAction)
@@ -35,7 +36,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
-        tableView.rowHeight = 175
+        //tableView.rowHeight = 175
         fetchMovies()
     }
     
